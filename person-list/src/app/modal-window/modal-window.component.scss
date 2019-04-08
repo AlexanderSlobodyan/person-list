@@ -8,15 +8,13 @@
   z-index: 20;
 
   .modal-body {
-    position: absolute;
+    position: relative;
     justify-content: center;
-    width: 95%;
-    height: 95%;
+    width: 100%;
+    height: 100%;
     padding: 2rem;
     background-color: #f5f2f0;
-    border-radius: 2%;
-    border: 5px solid #2C3446;
-    /* margin exposes part of the modal background */
+
   }
 }
 
@@ -34,24 +32,9 @@
   overflow: hidden;
 }
 
-:host /deep/ .Input-view {
-  width: 80%;
-  // height: 3rem;
-  background-color: #2C3446;
-  color: #fff;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-top-color: #2C3446;
-  outline: none;
-  margin-bottom: 15x;
-  margin-top: 15px;
-  font-size: 15px;
-}
 
 :host /deep/ .InputControl {
-  width: 80%;
-  // height: 3rem;
+  width: 60%;
   background-color: #2C3446;
   color: #fff;
   border-top: none;
@@ -64,61 +47,6 @@
   font-size: 15px;
 }
 
-:host /deep/ .p-control {
-  width: 20%;
-  height: 2rem;
-}
-
-:host /deep/ .col-1 {
-  // margin-top: 60px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #2C3446;
-}
-
-:host /deep/ .row-4 {
-  background-color: #2C3446;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-}
-
-:host /deep/ .row-2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-
-}
-
-:host /deep/ .row-2 .text-info {
-  font-size: 20px;
-  color: #fff;
-}
-
-:host /deep/ .row-2-view {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-}
-
-:host /deep/ .row-2-view .text-view {
-  font-size: 20px;
-  color: #fff;
-}
-
-:host /deep/ .row-4-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-top: 30px;
-}
 
 .popupClose {
   position: absolute;
@@ -170,17 +98,5 @@
     border: 3px solid #2C3446;
     background-color: #008080;
     outline: 0;
-  }
-}
-
-:host /deep/ .formName {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  background-color: #2C3446;
-
-  p {
-    font-size: 20px;
   }
 }

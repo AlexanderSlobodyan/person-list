@@ -7,7 +7,7 @@ table {
   width: 60%;
   height: 60%;
   border-collapse: collapse;
-  margin: 50px auto;
+  margin: 30px auto;
   background: white;
 }
 
@@ -113,4 +113,27 @@ td input:focus {
 .danger:hover {
   color: #800000;
   text-decoration: underline;
+}
+
+label {
+  display: inline-block;
+  width: 6em;
+
+}
+
+.form-control {
+  width: 50%;
+  position: relative;
+  text-align: right;
+  // height: 3rem;
+  background-color: #2C3446;
+  color: #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-top-color: #2C3446;
+  outline: none;
+  height: 15px;
+  display: inline-block;
+  margin-left: 100px;
 }

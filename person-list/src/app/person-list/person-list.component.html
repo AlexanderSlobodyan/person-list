@@ -44,7 +44,7 @@
         <td>{{item.IDTASKAUTHSTATUS}}</td>
         <td>{{item.DOCTYPENAME}}</td>
         <td>
-          <button class="info" (click)="checkedPerson()">info</button>
+          <!-- <button class="info" (click)="checkedPerson()">info</button> -->
           <button class="danger" (click)="deletePerson(i)">Delete</button></td>
       </tr>
       <ng-template #name>
@@ -56,26 +56,78 @@
     <app-modal-window>
       <form [formGroup]="personsform">
         <div class="form-group">
-          <label>First Name</label>
-          <input type="text" class="form-control" formControlName="CARD" (3) required>
+          <label>CARD</label>
+          <input type="text" class="form-control" formControlName="CARD">
         </div>
 
         <div class="form-group">
-          <label>Last Name</label>
-          <input type="text" class="form-control" formControlName="LASTNAME" (3) required>
+          <label>LASTNAME</label>
+          <input type="text" class="form-control" formControlName="LASTNAME">
         </div>
-
-
         <div class="form-group">
-          <label>Email</label>
-          <input type="text" class="form-control" formControlName="STATUSNAME" (4) required>
+          <label>FIRSTNAME</label>
+          <input type="text" class="form-control" formControlName="FIRSTNAME">
         </div>
 
         <div class="form-group">
-          <label>Password</label>
-          <input type="text" class="form-control" formControlName="ACC1NUM" (4) required>
+          <label>PATRONYMIC</label>
+          <input type="text" class="form-control" formControlName="PATRONYMIC">
         </div>
-
+        <div class="form-group">
+          <label>IDPERSON</label>
+          <input type="text" class="form-control" formControlName="IDPERSON">
+        </div>
+        <div class="form-group">
+          <label>STATUSNAME</label>
+          <input type="text" class="form-control" formControlName="STATUSNAME">
+        </div>
+        <div class="form-group">
+          <label>ACC1NUM</label>
+          <input type="text" class="form-control" formControlName="ACC1NUM">
+        </div>
+        <div class="form-group">
+          <label>CARDTEMPLNAME</label>
+          <input type="text" class="form-control" formControlName="CARDTEMPLNAME">
+        </div>
+        <div class="form-group">
+          <label>ORGNAMESHORT</label>
+          <input type="text" class="form-control" formControlName="ORGNAMESHORT">
+        </div>
+        <div class="form-group">
+          <label>PERSONTYPENAME</label>
+          <input type="text" class="form-control" formControlName="PERSONTYPENAME">
+        </div>
+        <div class="form-group">
+          <label>CURRNAME</label>
+          <input type="text" class="form-control" formControlName="CURRNAME">
+        </div>
+        <div class="form-group">
+          <label>IDCARD</label>
+          <input type="text" class="form-control" formControlName="IDCARD">
+        </div>
+        <div class="form-group">
+          <label>BIRTHDATE</label>
+          <input type="text" class="form-control" formControlName="BIRTHDATE">
+        </div>
+        <div class="form-group">
+          <label>DOCSERIES</label>
+          <input type="text" class="form-control" formControlName="DOCSERIES">
+        </div>
+        <div class="form-group">
+          <label>DOCNUM</label>
+          <input type="text" class="form-control" formControlName="DOCNUM">
+        </div>
+        <div class="form-group">
+          <label>IDTASKAUTHSTATUS</label>
+          <input type="text" class="form-control" formControlName="IDTASKAUTHSTATUS">
+        </div>
+        <div class="form-group">
+          <label>DOCTYPENAME</label>
+          <input type="text" class="form-control" formControlName="DOCTYPENAME">
+        </div>
+        <div class="row-4-button">
+          <a (click)="onSubmit()" class="onSubmitButtom">Save</a>
+        </div>
       </form>
     </app-modal-window>
   </div>

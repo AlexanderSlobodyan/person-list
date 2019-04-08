@@ -10,11 +10,11 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class PersonListComponent implements OnInit {
 
+  personsform: FormGroup;
   public personList: any[];
   public checked = true;
   public addPers = false;
   public personData;
-  personsform: FormGroup;
 
   constructor(private personService: PersonServiceService) { }
 
@@ -22,10 +22,21 @@ export class PersonListComponent implements OnInit {
     this.personsform = new FormGroup({
       CARD: new FormControl(),
       LASTNAME: new FormControl(),
+      FIRSTNAME: new FormControl(),
+      PATRONYMIC: new FormControl(),
+      IDPERSON: new FormControl(),
       STATUSNAME: new FormControl(),
-      ACC1NUM: new FormControl()
-
-
+      ACC1NUM: new FormControl(),
+      CARDTEMPLNAME: new FormControl(),
+      ORGNAMESHORT: new FormControl(),
+      PERSONTYPENAME: new FormControl(),
+      CURRNAME: new FormControl(),
+      IDCARD: new FormControl(),
+      BIRTHDATE: new FormControl(),
+      DOCSERIES: new FormControl(),
+      DOCNUM: new FormControl(),
+      IDTASKAUTHSTATUS: new FormControl(),
+      DOCTYPENAME: new FormControl(),
 
     });
     this.personService.IsClose$.subscribe(i => {
@@ -61,5 +72,8 @@ export class PersonListComponent implements OnInit {
     this.addPers = true;
   }
 
+  onSubmit() {
+    console.log(this.personList);
+  }
 
 }
