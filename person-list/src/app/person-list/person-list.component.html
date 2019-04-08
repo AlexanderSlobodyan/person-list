@@ -1,0 +1,81 @@
+<div class="main">
+  <button (click)="addModal()" href="#popup">Create User</button>
+
+  <table class="heavyTable">
+    <thead>
+      <tr>
+        <th class="border-left">Card</th>
+        <th>Lastname</th>
+        <th>Firstname</th>
+        <th>Patronymic</th>
+        <th>Idperson</th>
+        <th>Statusname</th>
+        <th>Acc1num</th>
+        <th>Cardtemplname</th>
+        <th>Orgnameshort</th>
+        <th>Persontypename</th>
+        <th>Currename</th>
+        <th>IDcard</th>
+        <th>Birthdate</th>
+        <th>Docseries</th>
+        <th>DOCNUM</th>
+        <th>IDtaskauthstatus</th>
+        <th>Doctypename</th>
+        <th class="border-rigth">Option</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of personList; let i = index">
+        <td *ngIf="checked ; else name">{{item.CARD}}</td>
+        <td class="centre-text">{{item.LASTNAME}}</td>
+        <td class="centre-text">{{item.FIRSTNAME}}</td>
+        <td class="centre-text">{{item.PATRONYMIC}}</td>
+        <td>{{item.IDPERSON}}</td>
+        <td>{{item.STATUSNAME}}</td>
+        <td>{{item.ACC1NUM}}</td>
+        <td>{{item.CARDTEMPLNAME}}</td>
+        <td>{{item.ORGNAMESHORT}}</td>
+        <td>{{item.PERSONTYPENAME}}</td>
+        <td>{{item.CURRNAME}}</td>
+        <td>{{item.IDCARD}}</td>
+        <td>{{item.BIRTHDATE}}</td>
+        <td>{{item.DOCSERIES}}</td>
+        <td>{{item.DOCNUM}}</td>
+        <td>{{item.IDTASKAUTHSTATUS}}</td>
+        <td>{{item.DOCTYPENAME}}</td>
+        <td>
+          <button class="info" (click)="checkedPerson()">info</button>
+          <button class="danger" (click)="deletePerson(i)">Delete</button></td>
+      </tr>
+      <ng-template #name>
+        <td></td>
+      </ng-template>
+    </tbody>
+  </table>
+  <div *ngIf="addPers">
+    <app-modal-window>
+      <form [formGroup]="personsform">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" class="form-control" formControlName="CARD" (3) required>
+        </div>
+
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" class="form-control" formControlName="LASTNAME" (3) required>
+        </div>
+
+
+        <div class="form-group">
+          <label>Email</label>
+          <input type="text" class="form-control" formControlName="STATUSNAME" (4) required>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="text" class="form-control" formControlName="ACC1NUM" (4) required>
+        </div>
+
+      </form>
+    </app-modal-window>
+  </div>
